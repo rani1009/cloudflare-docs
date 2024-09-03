@@ -705,11 +705,11 @@ As of Wrangler v3.2.0, `wrangler dev` is supported by any Linux distributions pr
   - Path to a custom certificate.
 - `--local-upstream` string optional
   - Host to act as origin in local mode, defaults to `dev.host` or route.
+- `--assets` string optional beta
+  - Root folder of static assets to be served.
 - `--legacy-assets` string optional experimental
   - Root folder of static assets to be served.
   - Use in combination with `--name` and `--latest` for basic static file hosting. For example: `wrangler dev --name personal_blog --legacy-assets dist/ --latest`.
-- `--assets` string optional experimental
-  - Root folder of static assets to be served.
     :::caution
     This is an experimental feature and its behavior will be changing soon. Use `--legacy-assets` instead to ensure that you get consistent behavior when this option changes.
     :::
