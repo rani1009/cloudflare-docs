@@ -11,6 +11,7 @@ description: Create a Worker with assets throught the wrangler CLI or through a 
 import {
 	Badge,
 	Description,
+	FileTree,
 	InlineBadge,
 	Render,
 	TabItem,
@@ -31,7 +32,7 @@ Assets are served based on file based routing. Any requests that don't match a f
 
 wrangler.toml file:
 
-```sh
+```sh title="wrangler.toml"
 name = "workers-static-assets"
 compatibility_date = "2024-08-29"
 
@@ -41,15 +42,15 @@ directory = "./public"
 
 Directory structure:
 
-```
-|---- …
-|---- public
-      |___ index.html
-      |___ contact.html
-      |___ blog
-            |___ index.html
-            |___ archive.html
-```
+<FileTree>
+- …
+- public
+ - index.html
+ - contact.html
+ - blog
+   - index.html
+   - archive.html
+</FileTree>
 
 File based routing would map incoming paths to the following files:
 
@@ -70,7 +71,7 @@ Requests are first served based on file based routing. Any requests that don't m
 
 wrangler.toml file:
 
-```sh
+```sh title="wrangler.toml"
 name = "workers-dynamic-assets-template"
 main = "src/index.ts"
 compatibility_date = "2024-08-29"
@@ -82,18 +83,17 @@ name = ASSETS
 
 Directory structure:
 
-```
-|---- …
-|---- public
-      |___ index.html
-      |___ contact.html
-      |___ blog
-            |___ index.html
-            |___ archive.html
-|---- src
-      |___ index.js
-
-```
+<FileTree>
+- …
+- public
+ - index.html
+ - contact.html
+ - blog
+   - index.html
+   - archive.html
+- src
+  - index.js
+</FileTree>
 
 File based routing would map incoming paths to the following files:
 
